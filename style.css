@@ -1,0 +1,141 @@
+:root {
+    --color-dark-bg: #110f1b; 
+    --color-primary-text: #e0d0f0; 
+    --color-accent-gold: #ffc72c;
+    --color-accent-blue: #4d9de0;
+    --color-danger-red: #e74c3c;
+    --font-heading: 'Cinzel', serif;
+}
+
+body {
+    background-color: var(--color-dark-bg);
+    color: var(--color-primary-text);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    color: var(--color-accent-gold);
+    border-bottom: 2px solid var(--color-accent-blue);
+    padding-bottom: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    flex: 2;
+}
+.product-card {
+    background-color: rgba(30, 20, 40, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--color-accent-blue);
+    transition: all 0.3s;
+}
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--color-accent-gold);
+}
+.product-extra-details {
+    max-height: 0; 
+    opacity: 0;
+    overflow: hidden; 
+    border-top: 1px dashed rgba(255, 255, 255, 0.2); 
+    padding-top: 0;
+    margin-top: 5px;
+    font-style: italic;
+    color: #ccc; 
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out, padding 0.4s; 
+}
+.product-card:hover .product-extra-details {
+    max-height: 100px; 
+    opacity: 1; 
+    padding-top: 5px; 
+}
+.low-stock-text {
+    color: var(--color-accent-gold);
+    font-weight: bold;
+}
+
+.sold-out-card {
+    background-color: #333;
+    color: #999;
+    border: 1px dashed var(--color-danger-red);
+    opacity: 0.6;
+}
+
+.add-btn {
+    background-color: var(--color-accent-blue);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.add-btn:hover:not(:disabled) {
+    background-color: #6a5acd; 
+    box-shadow: 0 0 8px var(--color-accent-blue);
+}
+
+.add-btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.checkout {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#cart-area {
+    background-color: rgba(20, 10, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--color-accent-gold);
+    height: fit-content;
+}
+
+#coupon-input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 3px;
+    border: 1px solid var(--color-accent-blue);
+    background-color: #2a1f3d;
+    color: var(--color-primary-text);
+}
+
+.hidden-msg {
+    display: none;
+}
+
+.error-msg {
+    color: var(--color-danger-red);
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid var(--color-danger-red);
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+
+.success-msg {
+    color: green;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid green;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+}

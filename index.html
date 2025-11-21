@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Mart Harohalli</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>✨ Mystic Mart Harohalli ✨</h1>
+    </header>
+    <main>
+        <section id="product-list">
+            <div class="product-card" id="card-potion">
+                <h3>Phoenix Feather Potion</h3>
+                <p>Grants temporary invulnerability.</p>
+                <p class="price">Cost: 35.00 Gold Shards</p>
+                <p id="stock-potion" class="low-stock-text">Only 3 left!</p>
+                <div class="product-extra-details">
+                    **Enchantment Note:** Infused with the essence of a reborn avian. Duration: 60 seconds.
+                </div>
+                <button class="add-btn" id="btn-potion" data-price="35.00" data-stock="3">Add to Cart</button>
+            </div>
+            <div class="product-card" id="card-scroll">
+                <h3>Scroll of Aetherial Banishment</h3>
+                <p>Instantly dispels minor enchantments.</p>
+                <p class="price">Cost: 50.00 Gold Shards</p>
+                <div class="product-extra-details">
+                    **Enchantment Note:** Requires Arcana skill 15+. Written in Draconic.
+                </div>
+                <button class="add-btn" id="btn-scroll" data-price="50.00">Add to Cart</button>
+            </div>
+            <div class="product-card" id="card-geode">
+                <h3>Geode of Focused Mana</h3>
+                <p>Amplifies basic spell damage.</p>
+                <p class="price">Cost: 15.50 Gold Shards</p>
+                <div class="product-extra-details">
+                    **Enchantment Note:** A common item. Must be charged under a full moon.
+                </div>
+                <button class="add-btn" id="btn-geode" data-price="15.50">Add to Cart</button>
+            </div>
+            <div class="product-card" id="card-amulet">
+                <h3>Silver Scryer's Amulet</h3>
+                <p>Provides a faint warning of nearby traps.</p>
+                <p class="price">Cost: 65.00 Gold Shards</p>
+                <div class="product-extra-details">
+                    **Enchantment Note:** Crafted by Gourav Wizard. Glows near danger.
+                </div>
+                <button class="add-btn" id="btn-amulet" data-price="65.00">Add to Cart</button>
+            </div>
+        </section>
+        <section id="cart-area">
+            <h2>📜 Cart Totals</h2>
+            <div id="cart-summary">
+                <p>Items: <span id="item-count">0</span></p>
+                <p>Total: <span id="total-display">0.00</span> Gold Shards</p>
+            </div>
+            <div id="coupon-system">
+                <h3>Coupon Rune</h3>
+                <input type="text" id="coupon-input" placeholder="Enter Code...">
+                <p id="coupon-message" class="hidden-msg"></p>
+            </div>
+            <button id="checkout-btn" class="add-btn checkout" disabled>Proceed to Checkout</button>
+            <p id="checkout-message" class="hidden-msg"></p>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
